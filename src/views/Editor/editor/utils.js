@@ -1,4 +1,17 @@
-
+import RectNode from "./node/RectNode"
+import CircleNode from "./node/CircleNode"
+import PolyNode from "./node/PolyNode"
+export function createNode(type,{graphView, dataModel, id, attributes={}}){
+    switch(type){
+        case 'rect':
+            return new RectNode({graphView, dataModel, id, attributes});
+        case 'circle':
+            return new CircleNode({graphView, dataModel, id, attributes});
+        case 'poly':
+            return new PolyNode({graphView, dataModel, id, attributes})
+        default:{}
+    }
+}
 
 
 
