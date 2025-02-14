@@ -4,7 +4,7 @@ export default class Selector {
     this.selectedNodes = [];
     this.oberserver = [];
   }
-  getDataModel(dataModel) {
+  setDataModel(dataModel) {
     this.dataModel = dataModel;
   }
   add(node) {
